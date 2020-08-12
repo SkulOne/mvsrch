@@ -1,0 +1,151 @@
+$fontColor: #fff;
+$font-additionally-color: #929293;
+$width-margin: 2rem;
+
+@font-face {
+  font-family: 'Soyuz Grotesk Bold';
+  src: url("../assets/fonts/SoyuzGroteskBold.woff") format("truetype");
+}
+
+a {
+  border: none;
+  color: white;
+  text-decoration: none;
+
+  &:focus {
+    color: inherit;
+  }
+
+  &:visited {
+    color: inherit;
+  }
+}
+
+body {
+  position: relative;
+  margin: 0;
+  background: linear-gradient(#eb3349, #f35b43), no-repeat;
+  color: $fontColor;
+  font-family: "Soyuz Grotesk Bold", sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem $width-margin;
+
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+
+    a {
+      margin-right: 10px;
+    }
+
+    form {
+      display: flex;
+      align-items: center;
+      margin: 0;
+
+      .search__input {
+        width: 200px;
+        height: 20px;
+        border-radius: 10px;
+        border-style: none;
+        outline: none;
+        padding: 1px 10px;
+      }
+
+      input[type=submit] {
+        background: none;
+        border-style: none;
+        color: $fontColor;
+        outline: none;
+      }
+    }
+  }
+}
+
+main {
+  background: linear-gradient(#323536, #232626);
+  border-radius: 35px 35px 0 0;
+  box-shadow: 0 0   20px 0 rgba(0, 0, 0, 0.7);
+  padding: 2rem $width-margin;
+  flex-grow: 2;
+
+  .results-label {
+    font-size: 2rem;
+    margin: 0;
+  }
+
+  .swiper-container {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+
+    .swiper-pagination {
+      margin-top: 1rem;
+    }
+  }
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 235px;
+  .film-photo {
+    height: 351px;
+    border-radius: 15px;
+    background: linear-gradient(#eb3349, #f35b43), no-repeat;
+  }
+
+  .film-name {
+    display: block;
+    font-size: 1.5rem;
+    height: 3.5rem;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .additionally {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 1rem;
+    color: $font-additionally-color;
+
+    .year, .rating {
+      font-size: 1rem;
+    }
+  }
+}
+
+footer {
+  height: 42px;
+  padding: 0 $width-margin;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(180deg, #232626, #181b1b);;
+  font-size: 1rem;
+}
+
+
+.test {
+  display: flex;
+  justify-content: center;
+}
